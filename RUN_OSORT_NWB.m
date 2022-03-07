@@ -24,8 +24,13 @@
 % -- This should be the outer folder you created in STEP 2
 basepath = 'I:\01_Coding_Datasets\OSort_TEST\SpikeSorting\';
 patientID = 'MW_3';
-nwbFname = 'MW3_Session_10_raw.nwb';
+nwbFname = 'MW3_Session_5_raw.nwb';
+% Select wires
+channS = 257:259;
 
 %% Step 6 Run the main Function
 
-OSort_RunFun_css("basePath",basepath,"patientID",patientID,"nwbFILE",nwbFname)
+OSort_RunFun_css("basePath",basepath,...
+                 "patientID",patientID,...
+                 "nwbFILE",nwbFname,...
+                 "chann",channS)

@@ -5,7 +5,7 @@ arguments
 
     inargs.basePath (1,1) string = "I:\01_Coding_Datasets\OSort_TEST\EVENTs\testNLX\"
     inargs.patientID (1,1) string = 'MW_1'
-    inargs.chann (1,8) double = 257:264
+    inargs.chann (1,:) double = 257:264
     inargs.sub (1,1) string = '1'
     inargs.sess (1,1) string = "1"
     inargs.wireType (1,1) string = "macro"
