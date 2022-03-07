@@ -13,19 +13,18 @@
 %% Step 3 Inside NEW folder create an 'nwb' folder
 % i.e., C:/Documents/Dat/Study1/SpikeSorting/Session1/nwb
 
-%% Step 4 Copy and past the NWB file of interest and '+types' folder from NWB repo folder
-% ONLY copy over the RAW version of the NWB 
+%% Step 4 Copy and past the NWB file of interest from NWB repo folder
+% ONLY copy over the RAW version of the NWB to the '\nwb' folder
 % For example:
 % In your new folder you should have the following:
-% -- /+types
 % -- /MW1_Session_2_raw.nwb
 
 %% Step 5 Change the following input arguments:
 % basepath 
 % -- This should be the outer folder you created in STEP 2
-basepath = 'C:/Documents/Data/Study1/SpikeSorting/Session1\';
-patientID = 'MW_1';
-nwbFname = 'MW1_Session_2_raw.nwb';
+basepath = 'I:\01_Coding_Datasets\OSort_TEST\SpikeSorting\';
+patientID = 'MW_3';
+nwbFname = 'MW3_Session_10_raw.nwb';
 
 %% Step 6 Run the main Function
 
