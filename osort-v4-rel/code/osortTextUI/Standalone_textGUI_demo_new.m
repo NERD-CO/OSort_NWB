@@ -7,7 +7,7 @@
 %% which files to sort
 paths=[];
 
-paths.basePath='J:\01_Coding_Datasets\LossAVERSION_Figure\AMC_PY21NO03\Behavioral Session 2\';    
+paths.basePath='Z:\EyeTrack_Manuscript\UCH_MW_9\Osort_test\SessionO\';    
 paths.pathOut=[paths.basePath , 'sort\'];
 paths.pathRaw=[paths.basePath 'rawDemo\'];
 paths.pathFigs=[paths.basePath 'figs\'];
@@ -15,7 +15,7 @@ paths.timestampspath=paths.basePath;             % if a timestampsInclude.txt fi
 
 paths.patientID='AMC_PY21'; % label in plots
 
-filesToProcess = [  257 258 259 260 261 262 263 264  ];  %which channels to detect/sort
+filesToProcess = [  257 258 259 260 261 262 263 264   ];  %which channels to detect/sort
 noiseChannels  = [   ]; % which channels to ignore
 
 groundChannels=[]; %which channels are ground (ignore)

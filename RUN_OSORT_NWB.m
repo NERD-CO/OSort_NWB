@@ -22,11 +22,11 @@
 %% Step 5 Change the following input arguments:
 % basepath 
 % -- This should be the outer folder you created in STEP 2
-basepath = 'I:\01_Coding_Datasets\OSort_TEST\SpikeSorting\Session_5\';
-patientID = 'MW_3';
-nwbFname = 'MW3_Session_5_raw.nwb';
+basepath = 'Z:\EyeTrack_Manuscript\UCH_MW_9\Osort_test\SessionT\';
+patientID = 'MW_9';
+nwbFname = 'MW9_Session_15_raw.nwb';
 % Select wires
-channS = 257:258;
+channS = 257:261;
 
 %% Step 6 Run the main Function
 
