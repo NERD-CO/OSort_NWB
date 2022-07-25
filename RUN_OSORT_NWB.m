@@ -22,9 +22,9 @@
 %% Step 5 Change the following input arguments:
 % basepath 
 % -- This should be the outer folder you created in STEP 2
-basepath = 'Z:\EyeTrack_Manuscript\UCH_MW_9\Osort_test\SessionT\';
+basepath = 'J:\01_Coding_Datasets\NLX_GUI_Tests\MW9\SpikingData\';
 patientID = 'MW_9';
-nwbFname = 'MW9_Session_15_raw.nwb';
+nwbFname = 'MW9_Session_1_filter.nwb';
 % Select wires
 channS = 257:261;
 

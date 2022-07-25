@@ -15,7 +15,8 @@ handles = initFilter(handles);
 % Length of recording = nrSamples
 cd(handles.nwbRawloc)
 testfile = nwbRead(handles.NWBfile);
-microwireD = testfile.acquisition.get('MicroWireSeries');
+% microwireD = testfile.acquisition.get('MicroWireSeries');
+microwireD = testfile.processing.get('ecephys').nwbdatainterface.get('LFP').electricalseries.get('MicroWireSeries');
 mi_ts = microwireD.timestamps.load();
 mi_dat = transpose(microwireD.data.load());
 

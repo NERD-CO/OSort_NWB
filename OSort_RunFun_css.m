@@ -10,7 +10,7 @@ arguments
     inargs.sess (1,1) string = "1"
     inargs.wireType (1,1) string = "macro"
     inargs.Epoch (1,1) double = 1
-    inargs.nwbFILE (1,1) string = 'MW1_Session_2_raw.nwb'
+    inargs.nwbFILE (1,1) string = 'MW1_Session_2_filter.nwb'
 
 end
 
