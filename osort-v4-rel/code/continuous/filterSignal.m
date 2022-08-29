@@ -11,6 +11,10 @@ if length(rawSignal)<20
 	return;
 end
 
+if ~isfloat(rawSignal)
+    rawSignal = double(rawSignal);
+end
+
 filteredSignal = filtfilt(Hd{1}, Hd{2}, rawSignal);
 
 

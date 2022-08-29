@@ -22,9 +22,9 @@
 %% Step 5 Change the following input arguments:
 % basepath 
 % -- This should be the outer folder you created in STEP 2
-basepath = 'J:\01_Coding_Datasets\NLX_GUI_Tests\MW9\SpikingData\';
-patientID = 'MW_9';
-nwbFname = 'MW9_Session_1_filter.nwb';
+basepath = 'Z:\JATTEST\MW12\Session1\';
+patientID = 'MW_12';
+nwbFname = 'MW12_Session_1_filter.nwb';
 % Select wires
 channS = 257:261;
 
