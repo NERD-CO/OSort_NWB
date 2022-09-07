@@ -22,11 +22,11 @@
 %% Step 5 Change the following input arguments:
 % basepath 
 % -- This should be the outer folder you created in STEP 2
-basepath = 'Z:\JATTEST\MW12\Session1\';
-patientID = 'MW_12';
-nwbFname = 'MW12_Session_1_filter.nwb';
+basepath = 'Z:\LossAversion\Patient folders\CLASE009\NWB-data\Spike_Data\';
+patientID = 'CLASE_9';
+nwbFname = 'CLASE09_Session_5_filter.nwb';
 % Select wires
-channS = 257:261;
+channS = 257:264;
 
 %% Step 6 Run the main Function
 
