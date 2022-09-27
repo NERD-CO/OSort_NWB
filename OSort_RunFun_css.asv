@@ -43,7 +43,7 @@ normalizeOnly = []; %which channels to use for normalization
 % end
 
 % default align is mixed, unless listed below as max or min.
-filesAlignMax = [ ];
+filesAlignMax = inargs.chann;
 filesAlignMin = [ ];
 
 
@@ -81,13 +81,13 @@ paramsIn.peakAlignMethod = 1; %1 find Peak, 2 none, 3 peak of power, 4 MTEO peak
 
 switch paramsIn.defaultAlignMethod
     case 1
-        alignStr = 'max';
+        alignStr
 
     case 2
-        alignStr = 'min';
+        alignStr
 
     case 3
-        alignStr = 'mixed';
+        alignStr
 
 
 end
@@ -101,7 +101,7 @@ end
 %extractionThreshold=0.1; %for wavelet method
 
 %for power detection method
-paramsIn.detectionMethod = 1; %1 power, 2 T pos, 3 T min, 4 T abs, 5 wavelet & USE 4 %%%%%%
+paramsIn.detectionMethod = 1; %1 power, 2 T pos, 3 T min, 3 T abs, 4 wavelet
 dp.kernelSize = 18;
 paramsIn.detectionParams = dp;
 extractionThreshold = 5;  % extraction threshold
