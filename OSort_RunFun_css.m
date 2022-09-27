@@ -91,17 +91,31 @@ paramsIn.detectionMethod = 1; %1 power, 2 T pos, 3 T min, 3 T abs, 4 wavelet
 dp.kernelSize = 18;
 paramsIn.detectionParams = dp;
 extractionThreshold = 5;  % extraction threshold
+if paramsIn.doGroundNormalization == 1 % Separate identifiers for ground normalization
+    extractionThreshold = extractionThreshold + 0.003;
+end
+
+%automatically adjust threshold to indicate min/max
+if isequal(filesToProcess,filesAlignMax) && isempty(filesAlignMin)
+    extractionThreshold=extractionThreshold+0.001;
+end
+if isequal(filesToProcess,filesAlignMin) && length(filesAlignMax)==0
+    extractionThreshold=extractionThreshold+0.002;
+end
 
 thres = [repmat(extractionThreshold, 1, length(filesToProcess))];
 
 % execute
-[normalizationChannels,paramsIn] = StandaloneGUI_prepare(noiseChannels,...
+[normalizationChannels,paramsIn,filesToProcess] = StandaloneGUI_prepare(noiseChannels,... % new
     doGroundNormalization,paramsIn,filesToProcess,filesAlignMax,...
     filesAlignMin, normalizeOnly, groundChannels);
 
 % Run Standalone gui
-
-StandaloneGUI_css(paths, filesToProcess, thres, normalizationChannels, paramsIn);
-
+try
+    StandaloneGUI_css(paths, filesToProcess, thres, normalizationChannels, paramsIn);
+    trialLog{trialIndex} = sprintf('COMPLETE: %s (var%d) [%s]',inargs.patientID,v,alignStr);
+catch
+    trialLog{trialIndex} = sprintf('ERROR: %s (var%d) [%s]',inargs.patientID,v,alignStr);
+end
 
 end
