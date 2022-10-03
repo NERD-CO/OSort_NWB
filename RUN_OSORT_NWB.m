@@ -22,9 +22,9 @@
 %% Step 5 Change the following input arguments:
 % basepath 
 % -- This should be the outer folder you created in STEP 2
-basepath = 'Z:\LossAversion\Patient folders\CLASE001\NWB-data\Spiking_Data\';
-patientID = 'CLASE_1';
-nwbFname = 'MW9_Session_6_filter.nwb';
+basepath = 'F:\01_Coding_Datasets\LossAversionPipeTest\CLASE006\NWB-data\Spike_Data\';
+patientID = 'CLASE_6';
+nwbFname = 'MW12_Session_3_filter.nwb';
 % Select wires
 channS = 257:264;
 
@@ -33,4 +33,5 @@ channS = 257:264;
 OSort_RunFun_css("basePath",basepath,...
                  "patientID",patientID,...
                  "nwbFILE",nwbFname,...
-                 "chann",channS)
+                 "chann",channS,...
+                 "defaultAlignM",1)

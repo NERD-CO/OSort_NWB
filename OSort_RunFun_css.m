@@ -10,6 +10,7 @@ arguments
     inargs.sess (1,1) string = "1"
     inargs.wireType (1,1) string = "macro"
     inargs.Epoch (1,1) double = 1
+    inargs.defaultAlignM (1,1) double = 3
     inargs.nwbFILE (1,1) string = 'MW1_Session_2_filter.nwb'
 
 end
@@ -76,8 +77,8 @@ paramsIn.blockNrRawFig = [ 1 2 100 110];   % for which block will a raw figure b
 paramsIn.outputFormat = 'png';
 paramsIn.thresholdMethod = 1; %1=approx, 2=exact
 paramsIn.prewhiten = 0; %0=no, 1=yes,whiten raw signal (dont)
-paramsIn.defaultAlignMethod = 3;  %only used if peak finding method is "findPeak". 1=max, 2=min, 3=mixed
-paramsIn.peakAlignMethod = 1; %1 find Peak, 2 none, 3 peak of power, 4 MTEO peak
+paramsIn.defaultAlignMethod = inargs.defaultAlignM;  %only used if peak finding method is "findPeak". 1=max, 2=min, 3=mixed %%%%%% % first min and then max
+paramsIn.peakAlignMethod = 1; %1 find Peak, 2 none, 3 peak of power, 4 MTEO peak                         %%%%%%
 
 switch paramsIn.defaultAlignMethod
     case 1
@@ -125,11 +126,9 @@ thres = [repmat(extractionThreshold, 1, length(filesToProcess))];
     filesAlignMin, normalizeOnly, groundChannels);
 
 % Run Standalone gui
-try
-    StandaloneGUI_css(paths, filesToProcess, thres, normalizationChannels, paramsIn);
-    trialLog = sprintf('COMPLETE: %s (var%d) [%s]',inargs.patientID,alignStr);
-catch
-    trialLog = sprintf('ERROR: %s (var%d) [%s]',inargs.patientID,alignStr);
-end
+
+StandaloneGUI_css(paths, filesToProcess, thres, normalizationChannels, paramsIn);
+trialLog = sprintf('COMPLETE: %s (var%d) [%s]',inargs.patientID,alignStr);
+
 
 end
