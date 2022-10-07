@@ -22,7 +22,7 @@
 %% Step 5 Change the following input arguments:
 % basepath 
 % -- This should be the outer folder you created in STEP 2
-basepath = 'F:\01_Coding_Datasets\LossAversionPipeTest\CLASE006\NWB-data\Spike_Data\';
+basepath = 'D:\LossAversionHomeTest\CLASE006\NWB-data\Spike_Data\';
 patientID = 'CLASE_6';
 nwbFname = 'MW12_Session_3_filter.nwb';
 % Select wires

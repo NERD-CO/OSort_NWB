@@ -160,7 +160,12 @@ for i=startWithBlock:runs
     %convert timestamps
     spikeTimestampsTmp = spikeTimestamps;
     if length( spikeTimestampsTmp ) > 0
-        spikeTimestampsConverted = convertTimestamps( timestampsRaw, spikeTimestampsTmp, params.samplingFreq, params.rawFileVersion );
+        spikeTimestampsConverted = convertTimestamps_css( timestampsRaw, spikeTimestampsTmp, params.samplingFreq, params.rawFileVersion );
+%         spikeTimestampsConverted = convertTimestamps( timestampsRaw, spikeTimestampsTmp, params.samplingFreq, params.rawFileVersion );
+        [row,~] = size(spikeTimestampsConverted);
+        if row > 1
+            spikeTimestampsConverted = transpose(spikeTimestampsConverted);
+        end
     else
         spikeTimestampsConverted = [];
     end

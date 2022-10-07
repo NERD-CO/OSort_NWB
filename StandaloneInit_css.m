@@ -22,11 +22,6 @@ mi_dat = transpose(microwireD.data.load());
 
 handles.nrSamples = size(mi_dat,1);
 
-% if length(headerInfo)>0
-%     ADbitVolts = str2num(getNumFromCSCHeader(headerInfo, 'ADBitVolts'));
-% else
-%     ADbitVolts = nan;  %undefined
-% end
 ADbitVolts = microwireD.data_conversion;
 
 %old ret params: sampleFreq,isContinous,headerInfo

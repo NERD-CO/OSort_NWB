@@ -93,7 +93,6 @@ switch paramsIn.defaultAlignMethod
 
 end
 
-
 %for wavelet detection method
 %paramsIn.detectionMethod=5; %1 power, 2 T pos, 3 T min, 4 T abs, 5 wavelet
 %dp.scalesRange = [0.2 1.0]; %in ms
