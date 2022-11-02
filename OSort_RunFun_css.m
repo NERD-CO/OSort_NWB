@@ -44,8 +44,7 @@ normalizeOnly = []; %which channels to use for normalization
 % end
 
 % default align is mixed, unless listed below as max or min.
-filesAlignMax = [ ];
-filesAlignMin = [ ];
+
 
 
 %% global settings
@@ -83,13 +82,18 @@ paramsIn.peakAlignMethod = 1; %1 find Peak, 2 none, 3 peak of power, 4 MTEO peak
 switch paramsIn.defaultAlignMethod
     case 1
         alignStr = 'max';
+        filesAlignMax = inargs.chann;
+        filesAlignMin = [ ];
 
     case 2
         alignStr = 'min';
+        filesAlignMax = [ ];
+        filesAlignMin =  inargs.chann;
 
     case 3
         alignStr = 'mixed';
-
+        filesAlignMax = [ ];
+        filesAlignMin = [ ];
 
 end
 
