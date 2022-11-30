@@ -35,7 +35,7 @@ end
 
 baseP = split(handles.pathRaw,'\');
 baseP2 = baseP(1:end-2);
-baseFig = [char(join(baseP2,'\')) , '\figs\5'];
+baseFig = [char(join(baseP2,'\')) , '\figs\',num2str(handles.paramExtractionThreshold)];
 
 %% PDF
 figure;
